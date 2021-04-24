@@ -1,0 +1,423 @@
+pkt:
+  diamond: 1
+  netherite: 4
+skin:
+  shield:
+    stone_shield: 12
+    iron_shield: 14
+    fell_barrier: 25
+    steel_shield: 22
+    netherite_plated_shield: 28
+    shield_of_undying: 32
+    gold_plated_shield: 26
+    northern_shield: 28
+    skull_shield: 28
+    glass_shield: 16
+    leather_shield: 10
+  arm:
+    nightstick:
+      wooden: 22
+      stone: 24
+      iron: 26
+      diamond: 28
+      netherite: 32
+    imperial_blaster: 16
+    light_assault_rifle: 18
+    heavy_assault_rifle: 24
+    sniper_rifle: 28
+    ak-47: 12
+    pump_action_shotgun: 24
+  bow:
+    gold_bow: 14
+    obsidian_bow: 18
+    shortbow: 12
+    compound_bow: 14
+    dark_bow: 28
+    diamond_bow: 26
+    flame_bow: 20
+    frost_bow: 18
+    hunting_bow: 16
+    long_bow: 14
+    iron_bow: 16
+  elytra:
+    purple_beetle_wings: 66
+    steampunk_glider: 64
+    creeper_minecon: 78
+    enderman_minecon: 88
+    pickaxe_minecon: 96
+  sword:
+    iron_scabbard:
+      wooden: 18
+      stone: 20
+      iron: 22
+      diamond: 25
+      netherite: 28
+    charged_sword:
+      wooden: 32
+      stone: 38
+      iron: 42
+      diamond: 46
+      netherite: 48
+    golden_javelin:
+      wooden: 18
+      stone: 20
+      iron: 24
+      diamond: 26
+      netherite: 28
+    dwarven_sword:
+      wooden: 15
+      stone: 18
+      iron: 22
+      diamond: 24
+      netherite: 26
+    eastern_glaive:
+      wooden: 30
+      stone: 42
+      iron: 48
+      diamond: 55
+      netherite: 64
+    elven_sword:
+      wooden: 22
+      stone: 24
+      iron: 28
+      diamond: 30
+      netherite: 32
+    dimensional_sword:
+      wooden: 18
+      stone: 20
+      iron: 24
+      diamond: 26
+      netherite: 28
+    spiked_baseball_bat:
+      wooden: 22
+      stone: 24
+      iron: 28
+      diamond: 30
+      netherite: 32
+    skull_cutlass:
+      wooden: 32
+      stone: 38
+      iron: 40
+      diamond: 44
+      netherite: 48
+    falchion_longsword:
+      wooden: 16
+      stone: 18
+      iron: 22
+      diamond: 24
+      netherite: 26
+    western_glaive:
+      wooden: 18
+      stone: 22
+      iron: 24
+      diamond: 28
+      netherite: 30
+    wooden_staff:
+      wooden: 12
+      stone: 16
+      iron: 18
+      diamond: 20
+      netherite: 22
+  axe:
+    hatchet:
+      wooden: 16
+      stone: 18
+      iron: 21
+      diamond: 20
+      netherite: 22
+    diamond_battleaxe:
+      wooden: 42
+      stone: 46
+      iron: 48
+      diamond: 52
+      netherite: 55
+    nordic_axe:
+      wooden: 30
+      stone: 34
+      iron: 36
+      diamond: 38
+      netherite: 40
+    wooden_mace:
+      wooden: 18
+      stone: 20
+      iron: 24
+      diamond: 26
+      netherite: 28
+    wand:
+      wooden: 52
+      stone: 58
+      iron: 62
+      diamond: 64
+      netherite: 68
+    iron_war_axe:
+      wooden: 18
+      stone: 20
+      iron: 22
+      diamond: 26
+      netherite: 28
+    volcano_staff:
+      wooden: 32
+      stone: 36
+      iron: 44
+      diamond: 46
+      netherite: 48
+    war_hammer:
+      wooden: 18
+      stone: 20
+      iron: 22
+      diamond: 24
+      netherite: 26
+    golden_battleaxe:
+      wooden: 26
+      stone: 28
+      iron: 32
+      diamond: 36
+      netherite: 38
+    golden_war_axe:
+      wooden: 28
+      stone: 30
+      iron: 34
+      diamond: 38
+      netherite: 40
+    golden_mace:
+      wooden: 20
+      stone: 24
+      iron: 28
+      diamond: 30
+      netherite: 32
+    iron_mace:
+      wooden: 18
+      stone: 22
+      iron: 24
+      diamond: 26
+      netherite: 28
+  armor:
+    cowboy:
+      chainmail: 48
+      golden: 48
+      iron: 64
+      diamond: 72
+      netherite: 80
+    apache:
+      chainmail: 44
+      golden: 44
+      iron: 68
+      diamond: 74
+      netherite: 78
+    aztec:
+      chainmail: 42
+      golden: 42
+      iron: 62
+      diamond: 68
+      netherite: 72
+    guard:
+      chainmail: 46
+      golden: 46
+      iron: 68
+      diamond: 72
+      netherite: 76
+    emperors:
+      chainmail: 64
+      golden: 64
+      iron: 72
+      diamond: 76
+      netherite: 80
+    kings:
+      chainmail: 68
+      golden: 68
+      iron: 78
+      diamond: 82
+      netherite: 88
+    kinghts:
+      chainmail: 55
+      golden: 55
+      iron: 68
+      diamond: 74
+      netherite: 78
+    ninja:
+      chainmail: 76
+      golden: 76
+      iron: 88
+      diamond: 94
+      netherite: 96
+    nordic:
+      chainmail: 50
+      golden: 50
+      iron: 60
+      diamond: 68
+      netherite: 72
+    bone:
+      chainmail: 42
+      golden: 42
+      iron: 66
+      diamond: 72
+      netherite: 76
+    space:
+      chainmail: 42
+      golden: 42
+      iron: 66
+      diamond: 72
+      netherite: 76
+    spartan:
+      chainmail: 38
+      golden: 38
+      iron: 56
+      diamond: 62
+      netherite: 68
+    dragon:
+      chainmail: 80
+      golden: 80
+      iron: 100
+      diamond: 112
+      netherite: 120
+    steel:
+      chainmail: 36
+      golden: 36
+      iron: 58
+      diamond: 62
+      netherite: 66
+    elven:
+      chainmail: 36
+      golden: 36
+      iron: 56
+      diamond: 62
+      netherite: 68
+    samurai:
+      chainmail: 55
+      golden: 55
+      iron: 70
+      diamond: 78
+      netherite: 82
+    steampunk:
+      chainmail: 32
+      golden: 32
+      iron: 52
+      diamond: 56
+      netherite: 60
+list_skins:
+  - Stone Shield
+  - Iron Shield
+  - Fell Barrier
+  - Steel Shield
+  - Netherite Plated Shield
+  - Shield of Undying
+  - Gold Plated Shield
+  - Northern Shield
+  - Skull Shield
+  - Glass Shield
+  - Leather Shield
+  - Gold Bow
+  - Obsidian Bow
+  - Shortbow
+  - Compound Bow
+  - Dark Bow
+  - Diamond Bow
+  - Flame Bow
+  - Frost Bow
+  - Hunting Bow
+  - Longbow
+  - Iron Bow
+  - Iron Scabberd
+  - Charged Sword
+  - Golden Javelin
+  - Dwarven Sword
+  - Eastern Glaive
+  - Elven Sword
+  - Dimensional Sword
+  - Spiked Baseball Bat
+  - SKull Cutlass
+  - Falchion Longsword
+  - Western Glaive
+  - Wooden Staff
+  - Purple Beetle Wings
+  - Steampunk Glider
+  - Creeper Minecon
+  - Enderman Minecon
+  - Pickaxe Minecon
+  - Nightstick
+  - Imperial Blaster
+  - Light Assault Rifle
+  - Heavy Assault Rifle
+  - Sniper Rifle
+  - 'AK-47'
+  - Pump Action Shotgun
+  - Hatchet
+  - Diamond Battleaxe
+  - Nordic Axe
+  - Wooden Mace
+  - Wand
+  - Iron War Axe
+  - Volcano Staff
+  - War Hammer
+  - Golden Battleaxe
+  - Golden War Axe
+  - Golden Mace
+  - Iron Mace
+  - Cowboy Hat
+  - Cowboy Jacket
+  - Cowboy Pants
+  - Cowboy Boots
+  - Apache Hood
+  - Apache Cload
+  - Apache Leggings
+  - Apache Boots
+  - Aztec Helmet
+  - Aztec Cloak
+  - Aztec Leggings
+  - Aztec Boots
+  - Guard Helmet
+  - Guard Chestplate
+  - Guard Leggings
+  - Guard Boots
+  - Emperors Helmet
+  - Emperors Chestplate
+  - Emperors Leggings
+  - Emperors Boots
+  - Kings Helmet
+  - Kings Chestplate
+  - Kings Leggings
+  - Kings Boots
+  - Knights Helmet
+  - Knights Chestplate
+  - Knights Leggings
+  - Knights Boots
+  - Ninja Mask
+  - Ninja Tunic
+  - Ninja Pants
+  - Ninja Boots
+  - Nordic Helmet
+  - Nordic Chestplate
+  - Nordic Leggings
+  - Nordic Boots
+  - Bone Helmet
+  - Bone Chestplate
+  - Bone Leggings
+  - Bone Boots
+  - Space Helmet
+  - Space Jacket
+  - Space Pants
+  - Space Boots
+  - Spartan Helmet
+  - Spartan Chestplate
+  - Spartan Leggings
+  - Spartan Boots
+  - Dragon Helmet
+  - Dragon Chestplate
+  - Dragon Leggings
+  - Dragon Boots
+  - Steel Helmet
+  - Steel Chestplate
+  - Steel Leggings
+  - Steel Boots
+  - Elven Helmet
+  - Elven Chestplate
+  - Elven Leggings
+  - Elven Boots
+  - Samurai Helmet
+  - Samurai Chestplate
+  - Samurai Leggings
+  - Samurai Boots
+  - Steampunk Cap
+  - Steampunk Tunic
+  - Steampunk Pants
+  - Steampunk Boots

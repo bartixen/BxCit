@@ -1,0 +1,12 @@
+main: pl.bartixen.bxcit.Main
+version: 2.0.1
+author: Bartixen
+name: BxCit
+api-version: 1.16
+website: https://bartixen.pl
+
+commands:
+  bxcit:
+  cit:
+  txt:
+  skiny:
