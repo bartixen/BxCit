@@ -1,12 +1,21 @@
 main: pl.bartixen.bxcit.Main
-version: 2.0.1
+version: 2.1.2
 author: Bartixen
 name: BxCit
 api-version: 1.16
+description: Plugin na skiny w minecraft
 website: https://bartixen.pl
 
 commands:
   bxcit:
+    description: Pokazuje informacje o pluginie
   cit:
+    description: Pokazuje informacje o pluginie
   txt:
+    description: Wyswietla jak wlaczyc na serwerze texturpacka
   skiny:
+    description: Otwiera gui z skinami
+  skinygracz:
+    description: Wyswietla wszystkie informacje o zakupach/wplatach gracza
+  sg:
+    description: Wyswietla wszystkie informacje o zakupach/wplatach gracza
