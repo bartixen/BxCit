@@ -1,8 +1,8 @@
 main: pl.bartixen.bxcit.Main
-version: 2.1.2
+version: 3.5.2
 author: Bartixen
 name: BxCit
-api-version: 1.16
+api-version: 1.17
 description: Plugin na skiny w minecraft
 website: https://bartixen.pl
 
