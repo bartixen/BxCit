@@ -10,9 +10,9 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
-import pl.bartixen.bxcit.Commands.Skiny;
+import pl.bartixen.bxcit.Commands.Skins;
 import pl.bartixen.bxcit.Data.ItemBuilder;
-import pl.bartixen.bxcit.Data.SkinyDataManager;
+import pl.bartixen.bxcit.Data.SkinsDataManager;
 import pl.bartixen.bxcit.Main;
 
 import java.io.IOException;
@@ -26,11 +26,11 @@ public class MenuListener implements Listener {
 
     static Main plugin;
 
-    static SkinyDataManager data;
+    static SkinsDataManager data;
 
     public MenuListener(Main m) {
         plugin = m;
-        data = SkinyDataManager.getInstance();
+        data = SkinsDataManager.getInstance();
     }
 
     @EventHandler
@@ -42,7 +42,7 @@ public class MenuListener implements Listener {
                 e.setCancelled(true);
                 if (e.getRawSlot() == 10) {
                     p.closeInventory();
-                    ShieldListener.shield(p);
+                    ArmListener.arm(p);
                 }
                 if (e.getRawSlot() == 12) {
                     p.closeInventory();
@@ -55,10 +55,6 @@ public class MenuListener implements Listener {
                 if (e.getRawSlot() == 16) {
                     p.closeInventory();
                     ElytraListener.elytra(p);
-                }
-                if (e.getRawSlot() == 28) {
-                    p.closeInventory();
-                    ArmListener.arm(p);
                 }
                 if (e.getRawSlot() == 30) {
                     p.closeInventory();
@@ -78,17 +74,17 @@ public class MenuListener implements Listener {
 
     public static String losowanie(int n)
     {
-        char[] bazowe = new char[n];
+        char[] base = new char[n];
 
         for (int i = 0; i <n; i++)
         {
-            bazowe[i] = (char) (((int)(Math.random() * 26)) + (int)'a');
+            base[i] = (char) (((int)(Math.random() * 26)) + (int)'a');
         }
 
-        return (new String(bazowe, 0, n));
+        return (new String(base, 0, n));
     }
 
-    static ArrayList<String> listapkt = new ArrayList<>();
+    static ArrayList<String> listpkt = new ArrayList<>();
 
     @EventHandler
     public void Pkt(InventoryClickEvent e) throws IOException {
@@ -121,7 +117,7 @@ public class MenuListener implements Listener {
                         int pkt = diamonds * pkt_diamend + netherite * pkt_netherite;
                         int wszystkie_pkt = pkt_gracza + pkt;
                         Date now = new Date();
-                        listapkt = (ArrayList<String>) data.getData().getStringList(uuid + ".lista_pkt");
+                        listpkt = (ArrayList<String>) data.getData().getStringList(uuid + ".lista_pkt");
                         SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss dd-MM-yyyy");
                         String wplacenie = losowanie(6);
                         data.getData().set(uuid + ".pkt", wszystkie_pkt);
@@ -130,19 +126,19 @@ public class MenuListener implements Listener {
                         data.getData().set(uuid + ".doladowania." + wplacenie + ".data", format.format(now));
                         data.getData().set(uuid + ".doladowania." + wplacenie + ".diamond", diamonds);
                         data.getData().set(uuid + ".doladowania." + wplacenie + ".netherite", netherite);
-                        listapkt.add(wplacenie);
-                        data.getData().set(uuid + ".lista_pkt", listapkt);
+                        listpkt.add(wplacenie);
+                        data.getData().set(uuid + ".lista_pkt", listpkt);
                         data.saveData();
                         p.sendMessage("§fPomyślnie dodano §9" + pkt + " pkt. §fdo twojego konta §7(Diamond - " + diamonds + ", Netherite Ingot - " + netherite + ") [ID:" + wplacenie + "]");
-                        PlayMusic.PlayMusicyes(p);
+                        PlayMusic.PlayMusicYes(p);
                     } else {
                         p.sendMessage("§7Brak przedmiotów w ekwipunku");
-                        PlayMusic.PlayMusicBlad(p);
+                        PlayMusic.PlayMusicError(p);
                     }
                 }
                 if (e.getRawSlot() == 26) {
                     p.closeInventory();
-                    Skiny.menu(p);
+                    Skins.menu(p);
                 }
             }
         }

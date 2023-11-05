@@ -9,7 +9,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.InventoryView;
-import pl.bartixen.bxcit.Commands.Skiny;
+import pl.bartixen.bxcit.Commands.Skins;
 import pl.bartixen.bxcit.Data.ItemBuilder;
 import pl.bartixen.bxcit.Main;
 import pl.bartixen.bxcit.Shop.ItemsShop;
@@ -44,7 +44,7 @@ public class BowListener implements Listener {
                 e.setCancelled(true);
                 if (e.getRawSlot() == 53) {
                     p.closeInventory();
-                    Skiny.menu(p);
+                    Skins.menu(p);
                 }
                 if (e.getRawSlot() == 10) {
                     p.closeInventory();

@@ -4,7 +4,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import pl.bartixen.bxcit.Data.SkinyDataManager;
+import pl.bartixen.bxcit.Data.SkinsDataManager;
 import pl.bartixen.bxcit.Listeners.PlayMusic;
 import pl.bartixen.bxcit.Main;
 
@@ -19,13 +19,13 @@ public class ItemsShop {
 
     static Main plugin;
 
-    static SkinyDataManager data;
+    static SkinsDataManager data;
 
     static ArrayList<String> listasprzedarzy = new ArrayList<>();
 
     public ItemsShop(Main m) {
         plugin = m;
-        data = SkinyDataManager.getInstance();
+        data = SkinsDataManager.getInstance();
     }
 
     public static void ItemShop(Player p, Material material, int pkt_ile, String nazwa, String nazwa_przedmiotu) throws IOException {
@@ -50,10 +50,10 @@ public class ItemsShop {
             itemStack.setItemMeta(itemMeta);
             p.getInventory().addItem(itemStack);
             p.sendMessage("§fPomyślnie zakupiono przedmiot §9" + nazwa + " §7[ID:" + kodsprzedazy + "]");
-            PlayMusic.PlayMusicKupno(p);
+            PlayMusic.PlayMusicBuy(p);
         } else {
             p.sendMessage("§7Nie masz wystarczająco punktów, aby kupić ten skin.");
-            PlayMusic.PlayMusicBlad(p);
+            PlayMusic.PlayMusicError(p);
         }
     }
 
@@ -97,22 +97,22 @@ public class ItemsShop {
             p.getInventory().addItem(leggings);
             p.getInventory().addItem(boots);
             p.sendMessage("§fPomyślnie zakupiono przedmiot §9" + nazwa + " §7[ID:" + kodsprzedazy + "]");
-            PlayMusic.PlayMusicKupno(p);
+            PlayMusic.PlayMusicBuy(p);
         } else {
             p.sendMessage("§7Nie masz wystarczająco punktów, aby kupić ten skin.");
-            PlayMusic.PlayMusicBlad(p);
+            PlayMusic.PlayMusicError(p);
         }
     }
 
     public static String losowanie(int n)
     {
-        char[] bazowe = new char[n];
+        char[] base = new char[n];
 
         for (int i = 0; i <n; i++)
         {
-            bazowe[i] = (char) (((int)(Math.random() * 26)) + (int)'a');
+            base[i] = (char) (((int)(Math.random() * 26)) + (int)'a');
         }
 
-        return (new String(bazowe, 0, n));
+        return (new String(base, 0, n));
     }
 }

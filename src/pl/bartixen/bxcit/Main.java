@@ -3,10 +3,10 @@ package pl.bartixen.bxcit;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import pl.bartixen.bxcit.Commands.BxCit;
-import pl.bartixen.bxcit.Commands.Skiny;
-import pl.bartixen.bxcit.Commands.SkinyGraczCommand;
+import pl.bartixen.bxcit.Commands.Skins;
+import pl.bartixen.bxcit.Commands.SkinsPlayerCommand;
 import pl.bartixen.bxcit.Commands.Txt;
-import pl.bartixen.bxcit.Data.SkinyDataManager;
+import pl.bartixen.bxcit.Data.SkinsDataManager;
 import pl.bartixen.bxcit.Listeners.*;
 import pl.bartixen.bxcit.Shop.ItemsShop;
 
@@ -19,25 +19,25 @@ public class Main extends JavaPlugin {
 
     public String version = getDescription().getVersion();
 
-    SkinyDataManager data;
+    SkinsDataManager data;
 
     public Main() {
-        data = SkinyDataManager.getInstance();
+        data = SkinsDataManager.getInstance();
     }
 
     @Override
     public void onEnable() {
         if ((!getDescription().getName().contains("BxCit")) || (!getDescription().getAuthors().contains("Bartixen"))) {
-            getLogger().log(Level.WARNING, "§8[========== §9BxCit §8==========]");
-            getLogger().log(Level.WARNING, "§cPlugin zostal wylaczony z powodu edytowania pliku §eplugin.yml");
-            getLogger().log(Level.WARNING, "§8[========== §9BxCit §8==========]");
+            getLogger().log(Level.WARNING, "[========== BxCit ==========]");
+            getLogger().log(Level.WARNING, "The plugin has been disabled due to file editing plugin.yml");
+            getLogger().log(Level.WARNING, "[========== BxCit ==========]");
             Bukkit.getServer().getPluginManager().disablePlugin(this);
         } else {
-            getLogger().log(Level.INFO, "§8[========== §9BxCit §8==========]");
-            getLogger().log(Level.INFO, "§fVersion: §b{0}", getDescription().getVersion());
-            getLogger().log(Level.INFO, "§fAuthor: §bBartixen");
-            getLogger().log(Level.INFO, "§fWebsite: §bhttps://bartixen.pl");
-            getLogger().log(Level.INFO, "§8[========== §9BxCit §8==========]");
+            getLogger().log(Level.INFO, "[========== BxCit ==========]");
+            getLogger().log(Level.INFO, "Version: {0}", getDescription().getVersion());
+            getLogger().log(Level.INFO, "Author: Bartixen");
+            getLogger().log(Level.INFO, "Website: https://bartixen.pl");
+            getLogger().log(Level.INFO, "[========== BxCit ==========]");
 
             getConfig().options().copyDefaults(true);
             saveConfig();
@@ -52,13 +52,12 @@ public class Main extends JavaPlugin {
 
             new BxCit(this);
             new Txt(this);
-            new SkinyGraczCommand(this);
+            new SkinsPlayerCommand(this);
             new ItemsShop(this);
-            new Skiny(this);
+            new Skins(this);
 
             getServer().getPluginManager().registerEvents(new PlayerJoin(this), this);
             getServer().getPluginManager().registerEvents(new MenuListener(this), this);
-            getServer().getPluginManager().registerEvents(new ShieldListener(this), this);
             getServer().getPluginManager().registerEvents(new ArmListener(this), this);
             getServer().getPluginManager().registerEvents(new BowListener(this), this);
             getServer().getPluginManager().registerEvents(new ElytraListener(this), this);

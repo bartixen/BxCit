@@ -44,7 +44,7 @@ public class AnvilListener implements Listener {
                     e.setCancelled(true);
                     player.closeInventory();
                     player.kickPlayer("§cWykryto próbę kopiowania");
-                    PlayMusic.PlayMusicBlad(player);
+                    PlayMusic.PlayMusicError(player);
                 }
             }
         }
@@ -64,23 +64,23 @@ public class AnvilListener implements Listener {
             AnvilInventory anvil = (AnvilInventory)inv;
             int rawSlot = e.getRawSlot();
             InventoryView view = e.getView();
-            String nazwaitemupierwszego = "";
+            String nameitfirst = "";
             if(rawSlot == view.convertSlot(rawSlot)){
                 ItemStack[] items = anvil.getContents();
                 ItemStack item1 = items[0];
                 ItemMeta itmemeta = item1.getItemMeta();
-                nazwaitemupierwszego = itmemeta.getDisplayName().toLowerCase();
+                nameitfirst = itmemeta.getDisplayName().toLowerCase();
             }
             if (e.getSlotType() == InventoryType.SlotType.RESULT) {
                 List<String> skiny = plugin.getConfig().getStringList("list_skins");
-                String nazwaitemu = e.getCurrentItem().getItemMeta().getDisplayName().toLowerCase();
+                String nameditemu = e.getCurrentItem().getItemMeta().getDisplayName().toLowerCase();
                 checkinvenoty.add(player);
                 for (String blacklist : skiny) {
-                    if ((ChatColor.stripColor(nazwaitemu).equals(ChatColor.stripColor(blacklist.toLowerCase()))) && (!(ChatColor.stripColor(nazwaitemu).equals(ChatColor.stripColor(nazwaitemupierwszego.toLowerCase()))))) {
+                    if ((ChatColor.stripColor(nameditemu).equals(ChatColor.stripColor(blacklist.toLowerCase()))) && (!(ChatColor.stripColor(nameditemu).equals(ChatColor.stripColor(nameitfirst.toLowerCase()))))) {
                         e.setCancelled(true);
                         player.closeInventory();
                         player.kickPlayer("§cWykryto próbę kopiowania");
-                        PlayMusic.PlayMusicBlad(player);
+                        PlayMusic.PlayMusicError(player);
                         plugin.getLogger().log(Level.WARNING, "§cGracz §e" + player.getDisplayName() + " §cpróbował skopiować skiny");
                         for (Player players : Bukkit.getOnlinePlayers()) {
                             if (players.hasPermission("bxcore.alert.helpop") || players.isOp()) {

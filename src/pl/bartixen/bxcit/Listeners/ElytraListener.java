@@ -9,9 +9,9 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.InventoryView;
-import pl.bartixen.bxcit.Commands.Skiny;
+import pl.bartixen.bxcit.Commands.Skins;
 import pl.bartixen.bxcit.Data.ItemBuilder;
-import pl.bartixen.bxcit.Data.SkinyDataManager;
+import pl.bartixen.bxcit.Data.SkinsDataManager;
 import pl.bartixen.bxcit.Main;
 import pl.bartixen.bxcit.Shop.ItemsShop;
 
@@ -22,11 +22,11 @@ public class ElytraListener implements Listener {
 
     static Main plugin;
 
-    static SkinyDataManager data;
+    static SkinsDataManager data;
 
     public ElytraListener(Main m) {
         plugin = m;
-        data = SkinyDataManager.getInstance();
+        data = SkinsDataManager.getInstance();
     }
 
     @EventHandler
@@ -44,7 +44,7 @@ public class ElytraListener implements Listener {
                 e.setCancelled(true);
                 if (e.getRawSlot() == 26) {
                     p.closeInventory();
-                    Skiny.menu(p);
+                    Skins.menu(p);
                 }
                 if (e.getRawSlot() == 11) {
                     p.closeInventory();
@@ -54,7 +54,7 @@ public class ElytraListener implements Listener {
                         ItemsShop.ItemShop(p, Material.ELYTRA, pkt_purple_beetle_wings, "Purple Beetle Wings", "purple beetle wings");
                     } else {
                         p.sendMessage("§7Nie masz wystarczająco punktów lub przedmiotów, aby kupić ten skin.");
-                        PlayMusic.PlayMusicBlad(p);
+                        PlayMusic.PlayMusicError(p);
                     }
                 }
                 if (e.getRawSlot() == 12) {
@@ -65,7 +65,7 @@ public class ElytraListener implements Listener {
                         ItemsShop.ItemShop(p, Material.ELYTRA, pkt_steampunk_glider, "Steampunk Glider", "streampunk glider");
                     } else {
                         p.sendMessage("§7Nie masz wystarczająco punktów lub przedmiotów, aby kupić ten skin.");
-                        PlayMusic.PlayMusicBlad(p);
+                        PlayMusic.PlayMusicError(p);
                     }
                 }
                 if (e.getRawSlot() == 13) {
@@ -76,7 +76,7 @@ public class ElytraListener implements Listener {
                         ItemsShop.ItemShop(p, Material.ELYTRA, pkt_creeper_minecon, "Creeper Minecon", "creeper minecon");
                     } else {
                         p.sendMessage("§7Nie masz wystarczająco punktów lub przedmiotów, aby kupić ten skin.");
-                        PlayMusic.PlayMusicBlad(p);
+                        PlayMusic.PlayMusicError(p);
                     }
                 }
                 if (e.getRawSlot() == 14) {
@@ -87,7 +87,7 @@ public class ElytraListener implements Listener {
                         ItemsShop.ItemShop(p, Material.ELYTRA, pkt_enderman_minecon, "Enderman Minecon", "enderman minecon");
                     } else {
                         p.sendMessage("§7Nie masz wystarczająco punktów lub przedmiotów, aby kupić ten skin.");
-                        PlayMusic.PlayMusicBlad(p);
+                        PlayMusic.PlayMusicError(p);
                     }
                 }
                 if (e.getRawSlot() == 15) {
@@ -98,7 +98,7 @@ public class ElytraListener implements Listener {
                         ItemsShop.ItemShop(p, Material.ELYTRA, pkt_pickaxe_minecon, "Pickaxe Minecon", "pickaxe minecon");
                     } else {
                         p.sendMessage("§7Nie masz wystarczająco punktów lub przedmiotów, aby kupić ten skin.");
-                        PlayMusic.PlayMusicBlad(p);
+                        PlayMusic.PlayMusicError(p);
                     }
                 }
             }

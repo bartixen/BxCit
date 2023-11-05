@@ -5,20 +5,19 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import pl.bartixen.bxcit.Data.SkinyDataManager;
+import pl.bartixen.bxcit.Data.SkinsDataManager;
 import pl.bartixen.bxcit.Main;
 
 import java.io.IOException;
-import java.util.UUID;
 
 public class PlayerJoin implements Listener {
 
     Main plugin;
-    SkinyDataManager data;
+    SkinsDataManager data;
 
     public PlayerJoin(Main m) {
         plugin = m;
-        data = SkinyDataManager.getInstance();
+        data = SkinsDataManager.getInstance();
     }
 
     @EventHandler
@@ -27,9 +26,9 @@ public class PlayerJoin implements Listener {
         String uuid = String.valueOf(p.getUniqueId());
         Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
             public void run() {
-                p.setResourcePack("https://www.dropbox.com/s/ayj97v063x26sb5/ROLL%20-%20Skiny.zip?dl=1");
+                p.setResourcePack("https://www.dropbox.com/scl/fi/52v4n30aohn601je22f7i/TXT.zip?rlkey=7tr4d7ftxmvbv6gqkw6ht8byl&dl=1");
             }
-        }, 20);
+        }, 5);
         data.getData().set(p.getDisplayName() + ".uuid", uuid);
         data.saveData();
     }

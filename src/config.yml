@@ -2,18 +2,6 @@ pkt:
   diamond: 1
   netherite: 4
 skin:
-  shield:
-    stone_shield: 12
-    iron_shield: 14
-    fell_barrier: 25
-    steel_shield: 22
-    netherite_plated_shield: 28
-    shield_of_undying: 32
-    gold_plated_shield: 26
-    northern_shield: 28
-    skull_shield: 28
-    glass_shield: 16
-    leather_shield: 10
   arm:
     nightstick:
       wooden: 22
@@ -295,17 +283,6 @@ skin:
       diamond: 56
       netherite: 60
 list_skins:
-  - Stone Shield
-  - Iron Shield
-  - Fell Barrier
-  - Steel Shield
-  - Netherite Plated Shield
-  - Shield of Undying
-  - Gold Plated Shield
-  - Northern Shield
-  - Skull Shield
-  - Glass Shield
-  - Leather Shield
   - Gold Bow
   - Obsidian Bow
   - Shortbow

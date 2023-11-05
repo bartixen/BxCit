@@ -1,0 +1,21 @@
+main: pl.bartixen.bxcit.Main
+version: 5.1.7
+author: Bartixen
+name: BxCit
+api-version: 1.20
+description: Plugin na skiny w minecraft
+website: https://bartixen.pl
+
+commands:
+  bxcit:
+    description: Shows information about the plugin
+  cit:
+    description: Shows information about the plugin
+  txt:
+    description: Shows how to enable texturepack on the server
+  skiny:
+    description: Opens the skins gui
+  skinygracz:
+    description: Displays all player purchase/deposit information
+  sg:
+    description: Displays all player purchase/deposit information
